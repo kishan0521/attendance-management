@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VTU Attendance Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>VTU Attendance Management</h1>
+            <p>Student Attendance Portal</p>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Student Information -->
+        <section class="student-section">
+
+            <h2>Student Information</h2>
+
+            <div class="student-form">
+
+                <div>
+                    <label>USN</label>
+                    <input
+                        type="text"
+                        id="usn"
+                        placeholder="Enter USN">
+                </div>
+
+                <div>
+                    <label>Student Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name">
+                </div>
+
+                <div>
+                    <label>Semester</label>
+                    <select id="semester">
+                        <option value="">Select Semester</option>
+                        <option>1st Semester</option>
+                        <option>2nd Semester</option>
+                        <option>3rd Semester</option>
+                        <option>4th Semester</option>
+                        <option>5th Semester</option>
+                        <option>6th Semester</option>
+                        <option>7th Semester</option>
+                        <option>8th Semester</option>
+                    </select>
+                </div>
+
+                <button id="addStudentBtn" class="add-btn">
+                    Add Student
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Attendance</h3>
+                <p id="averageAttendance">0%</p>
+            </div>
+
+            <div class="card">
+                <h3>Low Attendance</h3>
+                <p id="lowAttendance">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by USN or student name...">
+
+        </section>
+
+
+        <!-- Attendance Table -->
+        <section class="attendance-section">
+
+            <h2>Attendance Records</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>USN</th>
+                            <th>Name</th>
+                            <th>Semester</th>
+                            <th>Classes Held</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Attendance</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                        <!-- JavaScript will add students here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Attendance Marking -->
+        <section class="mark-section">
+
+            <h2>Mark Today's Attendance</h2>
+
+            <div class="mark-form">
+
+                <input
+                    type="text"
+                    id="attendanceUSN"
+                    placeholder="Enter Student USN">
+
+                <select id="attendanceStatus">
+
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+
+                </select>
+
+                <button id="markAttendanceBtn">
+                    Mark Attendance
+                </button>
+
+            </div>
+
+            <p id="attendanceMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>VTU Attendance Management System © 2026</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
